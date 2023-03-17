@@ -37,12 +37,17 @@ body {
   text-align: center;
   line-height: 1;
 }
+@media (min-width: 1200px) {
+  .attribution {
+    padding-top: 3rem;
+  }
+}
 .attribution a {
-  color: hsl(35, 77%, 62%);
+  color: hsl(5, 85%, 63%);
   transition: color 0.3s ease;
 }
 .attribution a:hover {
-  color: hsl(5, 85%, 63%);
+  color: hsl(240, 100%, 5%);
 }
 
 .img-fluid {
@@ -96,8 +101,9 @@ body {
   left: 0;
   right: 0;
   background-color: hsl(240, 100%, 5%);
-  opacity: 0.5;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .menu-btn {
@@ -144,6 +150,10 @@ body {
 .menu__item {
   text-decoration: none;
   color: hsl(240, 100%, 5%);
+  transition: color 0.3s ease;
+}
+.menu__item:hover {
+  color: hsl(5, 85%, 63%);
 }
 .menu--desk {
   display: none;
@@ -194,13 +204,15 @@ body {
   transform: translateX(0%);
 }
 .menu--open .overlay {
-  display: block;
+  opacity: 0.5;
+  pointer-events: inherit;
 }
 
 @media (min-width: 768px) {
   .wrap > .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: max-content;
     row-gap: 72px;
     -moz-column-gap: 32px;
          column-gap: 32px;
@@ -287,10 +299,17 @@ body {
   line-height: 1.1;
   letter-spacing: 0.3em;
   padding: 16px 32px;
+  transition: all 0.3s ease;
+}
+.btn:focus {
+  outline: none;
 }
 .btn--primary {
   background-color: hsl(5, 85%, 63%);
   color: white;
+}
+.btn--primary:hover {
+  background-color: hsl(240, 100%, 5%);
 }
 
 .news {
@@ -344,6 +363,10 @@ body {
   color: white;
   text-decoration: none;
   margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+.news__caption:hover {
+  color: hsl(35, 77%, 62%);
 }
 
 @media (min-width: 768px) {
@@ -404,4 +427,8 @@ body {
   color: hsl(240, 100%, 5%);
   text-decoration: none;
   margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+.top-item__title:hover {
+  color: hsl(5, 85%, 63%);
 }/*# sourceMappingURL=styles.css.map */

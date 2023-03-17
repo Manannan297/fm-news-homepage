@@ -50,12 +50,16 @@ body {
   text-align: center;
   line-height: 1;
 
+  @media (min-width: $width-desktop) {
+    padding-top: 3rem;
+  }
+
   a {
-    color: $color-soft-orange;
+    color: $color-soft-red;
     transition: color 0.3s ease;
 
     &:hover {
-      color: $color-soft-red;
+      color: $color-very-dark-blue;
     }
   }
 }
@@ -108,8 +112,9 @@ body {
   left: 0;
   right: 0;
   background-color: $color-very-dark-blue;
-  opacity: 0.5;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .menu-btn {
@@ -160,6 +165,11 @@ body {
   &__item {
     text-decoration: none;
     color: $color-very-dark-blue;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-soft-red;
+    }
   }
 
   &--desk {
@@ -219,7 +229,8 @@ body {
   }
 
   .overlay {
-    display: block;
+    opacity: 0.5;
+    pointer-events: inherit;
   }
 }
 
@@ -227,6 +238,7 @@ body {
   @media (min-width: $width-tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: max-content;
     row-gap: 72px;
     column-gap: 32px;
   }
@@ -308,10 +320,19 @@ body {
   line-height: 1.1;
   letter-spacing: 0.3em;
   padding: 16px 32px;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+  }
 
   &--primary {
     background-color: $color-soft-red;
     color: white;
+
+    &:hover {
+      background-color: $color-very-dark-blue;
+    }
   }
 }
 
@@ -367,6 +388,11 @@ body {
     color: white;
     text-decoration: none;
     margin-bottom: 8px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-soft-orange;
+    }
   }
 }
 
@@ -429,6 +455,11 @@ body {
       color: $color-very-dark-blue;
       text-decoration: none;
       margin-bottom: 10px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-soft-red;
+      }
     }
   }
 }
