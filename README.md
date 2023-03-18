@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [frontendmentor]()
-- Live Site URL: [github]()
+- Solution URL: [frontendmentor](https://www.frontendmentor.io/solutions/news-homepage-CYor0rsHwA)
+- Live Site URL: [github](https://manannan297.github.io/fm-news-homepage/)
 
 ## My process
 
